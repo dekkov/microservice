@@ -10,7 +10,8 @@ In order to use this microservice in your program. Follow these steps:
     
 ***Step 2: Get JSON File***
   + After sending the request, you will receive a JSON object that indicates if the email has been successfully sent.
-
+  + Example of JSON response
+  ![image](https://github.com/dekkov/microservice/assets/99220799/f69062f9-6b46-4f39-80e4-fc46ab7d5c24)
 
 
 ***UML Sequence Diagram***
