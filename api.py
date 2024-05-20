@@ -61,7 +61,7 @@ def send_email(t,subject = "Welcome Email", username="New User"):
 
             response = {
                 "user_email": t,
-                "State": "Queued. Thank you!",
+                "Status": "Queued. Thank you!",
             }
 
             return response
@@ -72,6 +72,8 @@ def send_email(t,subject = "Welcome Email", username="New User"):
             response = {
                 "Error code": error_code,
                 "Error message": error_message,
+                "Status": "Unsuccessful!",
+
             }
 
 
@@ -79,7 +81,8 @@ def send_email(t,subject = "Welcome Email", username="New User"):
         
         except Exception as Err:
             response = {
-                "Error message": f"Error sending email to {t}",
+                "Error message": f"Unknown error sending email to {t} ",
+                "Status": "Unsuccessful!",
             }
 
             return response
