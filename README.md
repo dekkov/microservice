@@ -2,18 +2,17 @@ This is the emailing mircroservice that welcome new user when they sign up succe
 
 In order to use this microservice in your program. Follow these steps:
 
-***Step 1: Create an account for your program to send the welcome email.***
-  + Create a new account on gmail.com
-  + Enable 2-factor authentication for your account
-  + Go to https://myaccount.google.com/u/3/apppasswords to retrieve an app password for the microservice
-  + Save that in your local computer
-    
-***Step 2: Setting up***
-  + In your file, replace 2 constants at the top of api.py
-  + EMAIL_ADDRESS will be your email address used to send the welcome emails
-  + EMAIL_PASSWORD will be the app password that you just created above
-  + In your terminal, enter "pip install flask" if you haven't installed it yet.
+***Step 1: Send a GET request to the microservice server.***
+  + The microservice server is located at https://dekkov.pythonanywhere.com/
+  + This is an example of the GET request: https://dekkov.pythonanywhere.com/send-email/"tranhoan@oregonstate.edu"?user_name=Hoang
+  + The user_name part is optional but you have to specify the specific request send-email along with the new user's email address.
 
-***Step 3: Communicate with the Microservice***
-  + Run the microservice with this command "python3 api.py"
-  + To communicate with the microservice, send an API request to 
+    
+***Step 2: Get JSON File***
+  + After sending the request, you will receive a JSON object that indicates if the email has been successfully sent.
+
+
+
+***UML Sequence Diagram***
+
+![Screenshot 2024-05-20 at 12 54 44 PM](https://github.com/dekkov/microservice/assets/99220799/6ff02922-ee44-4ed3-8f4b-7c089f6bb354)
